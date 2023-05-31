@@ -1,25 +1,63 @@
-// $(document).bind( 'heading-arrow', function (e) { 
-//   const headingArrow = $(document.body).scrollTop()-(e.deltaY*e.deltaFactor*100); 
-//   e.preventDefault(); 
-//   e.stopPropagation(); 
-//   $(document.body).stop().animate( { 
-//        scrollTop : nt 
-//    } , 500 , 'easeInOutCubic' );  
-// } )
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  
+  slidesPerView: 3,
+  spaceBetween: 30,
+  centeredSlides: true,
+  // slidesPerGroup: 3,
 
-// let slides = document.querySelectorAll('.slide');
-//     let navigationItems = document.querySelectorAll('.navigation-item');
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
-//     function showSlide(index) {
-//       for (var i = 0; i < slides.length; i++) {
-//         slides[i].classList.remove('active');
-//         navigationItems[i].classList.remove('active');
-//       }
+  loop: true,
 
-//       slides[index].classList.add('active');
-//       navigationItems[index].classList.add('active');
-//     }
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+const swiperHed = new SwiperHed('.swiperHed', {
+  // Optional parameters
+  direction: 'vertical',
+  
+  slidesPerView: 1,
+  spaceBetween: 40,
+  centeredSlides: true,
+  // slidesPerGroup: 3,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiperHed-pagination',
+    clickable: true,
+  },
+
+  loop: true,
+ 
+});
 
 
+// const slider = document.querySelector('swiper-container')
 
+// let mySwiper = new Swiper (slider, {
+//   sliderPerView: 3,
+//   spaceBetween: 10,
+// }) 
 
+// const swiper = new Swiper('.swiper', {
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'bullets',
+//   },
+// });
+
+// let swiper = new Swiper(".mySwiper", {
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+// });
